@@ -1,5 +1,5 @@
 # Getting and Cleaning Data Course Project
-The goal of this project is to prepare tidy data that can be used for later analysis.
+## The goal of this project is to prepare tidy data that can be used for later analysis.
 
 
 The script run_analysis.R does the following:
@@ -13,4 +13,4 @@ The file CodeBook.md describes the following:
  - Variables
  - Transformations
 
-The text file contains the tidy data that is the result of the process done in run_analysis.R.
+The text file average_data contains the tidy data that is the result of the process done in run_analysis.R.
