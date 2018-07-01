@@ -64,16 +64,15 @@ merged_data <- rbind(train, test)
 features_meanstd[,2]<- gsub("[()]","", features_meanstd[,2])
 features_meanstd[,2]<- gsub("-","", features_meanstd[,2])
 colnames(merged_data) <- c("subject", "activity", tolower(features_meanstd[,2]))
-write.table(merged_data, file="merged_data.txt", row.names = FALSE)
-head(merged_data)
 
 
 # Use descriptive activity names to name the activities in the data set
 merged_data$activity <- factor(merged_data$activity, levels = activity_labels[, 1], labels = activity_labels[, 2])
+write.table(merged_data, file="merged_data.txt", row.names = FALSE)
+head(merged_data)
 
 # create data set with the average of each variable for each activity and each subject
 average_data <-aggregate(merged_data[, 3:ncol(merged_data)], by=list(mergeddata$subject,merged_data$activity), FUN=mean, na.rm=TRUE)
 colnames(average_data) [1:2]<- c("subject", "activity") 
 write.table(average_data, file="average_data.txt", row.names = FALSE)
 head(average_data)
-
