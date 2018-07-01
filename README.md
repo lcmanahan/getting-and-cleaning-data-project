@@ -1,5 +1,5 @@
 # Getting and Cleaning Data Course Project
-## The goal of this project is to prepare tidy data that can be used for later analysis.
+The goal of this project is to prepare tidy data that can be used for later analysis.
 
 
 The script run_analysis.R does the following:
